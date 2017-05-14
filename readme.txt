@@ -2,7 +2,7 @@ Webcrawler Project
 
 Technologies:
 JDK 8
-Spring - MVC, Core, JDBC, ORM, Test
+Spring - MVC, Core
 CGLib
 Jackson JSON
 

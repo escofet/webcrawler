@@ -8,7 +8,7 @@
         <title>Home</title>
     </head>
     <body>
-        <h1>${salutate.message}</h1>
-        <h1>${salutate.username}</h1>
+        <h1>So long</h1>
+        <h1>${goodbye}</h1>
     </body>
 </html>
