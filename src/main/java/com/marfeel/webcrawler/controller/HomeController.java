@@ -19,7 +19,7 @@ public class HomeController {
 	
 	@RequestMapping(value="/bye")
 	public ModelAndView byebye(HttpServletResponse response) throws IOException {
-		return new ModelAndView("bye", "goodbye", "Pepe");
+		return new ModelAndView("/another/bye", "goodbye", "Pepe");
 	}
 }
 	
