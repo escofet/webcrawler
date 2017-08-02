@@ -2,7 +2,7 @@ package com.marfeel.crawler.model;
 
 public class Message {
 	private String message;
-	String username;
+	private String username;
 	
 	public Message(String message, String username) {
 		this.message = message;

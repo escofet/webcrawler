@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.marfeel.crawler.model.AuthPerson;
 import com.marfeel.crawler.model.Message;
 
 @Controller
@@ -27,5 +29,14 @@ public class DefController {
 	public String str(@PathVariable("name") String username, @RequestParam(value = "date", required = false) Date dateOrNull) throws IOException {
 		// Some code to deal with dateOrNull
 		return "So long friend " + username;
+	}
+	
+	@RequestMapping(value="/def/formservice", method = RequestMethod.POST)
+	@ResponseBody
+	public AuthPerson formProcessing(HttpServletRequest req, HttpServletResponse response) throws IOException {
+		return new AuthPerson(
+			req.getParameter("email"),
+			req.getParameter("password")
+		);
 	}
 }

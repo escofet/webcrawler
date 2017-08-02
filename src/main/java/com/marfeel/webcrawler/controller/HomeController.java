@@ -21,5 +21,9 @@ public class HomeController {
 	public ModelAndView byebye(HttpServletResponse response) throws IOException {
 		return new ModelAndView("/another/bye", "goodbye", "Pepe");
 	}
-}
 	
+	@RequestMapping(value="/formi")
+	public ModelAndView formInput(HttpServletResponse response) throws IOException {
+		return new ModelAndView("/another/formi", "goodbye", "Pepe");
+	}
+}
